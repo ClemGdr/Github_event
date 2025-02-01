@@ -18,13 +18,14 @@ jobs:
           pip install pytest
           pip install flake8
 
-      - name: test code
-        run: exit 5
-        continue-on-error: true
-
+      
       - name: Run tests
         run: |
           pytest
+          
+      - name: test code
+        run: exit 5
+        continue-on-error: true
 
       - name: Run flake8
         uses: py-actions/flake8@v2
