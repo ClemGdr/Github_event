@@ -21,11 +21,7 @@ jobs:
       
       - name: Run tests
         run: |
-          python-pytest
-
-      - name: test code
-        run: exit 5
-        continue-on-error: true
+          pytest-action@v2
 
       - name: Run flake8
         uses: py-actions/flake8@v2
